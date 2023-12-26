@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shuffle</title>
+
+    <style>
+        /* Add your existing styles here */
+        .flicker {
+            animation: flickerAnimation 0.5s infinite;
+        }
+
+        @keyframes flickerAnimation {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        #flickeringHeader {
+            font-size: 150px;
+            position: relative;
+        }
+
+        #neilArmstrong {
+            position: relative;
+            top: 1;
+            margin-left: 550px;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav id="nav">
+        <ul>
+            <a href="#"><li>Home</li></a>
+            <a href="apollo.html"><li>Biography</li></a>
+            <a href="project.html"><li>Our Projects</li></a>
+            <a href="contacti.html"><li>Contact</li></a>
+        </ul>
+    </nav>
+    <h2 id="flickeringHeader">Space isn't the limit
+        <p id="neilArmstrong">Neil Armstrong was the first person to walk on the moon.</p>
+    </h2>
+    <a href="apollo.html"><button>Biography</button></a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const nav = document.getElementById('nav');
+            const flickeringHeader = document.getElementById('flickeringHeader');
+
+            nav.style.background = '#1B4242';
+
+            nav.addEventListener('mousemove', function (event) {
+                const x = event.clientX / window.innerWidth * 100;
+                const y = event.clientY / window.innerHeight * 100;
+
+                nav.style.background = `linear-gradient(45deg,
+                    rgba(135, 206, 250, 0.8) 0%,
+                    rgba(104, 148, 219, 0.8) ${x}%,
+                    rgba(94, 58, 153, 0.8) ${y}%,
+                    rgba(117, 102, 184, 0.8) 0%,
+                    rgba(27, 66, 66, 0.8) 0%)`;
+            });
+
+            nav.addEventListener('mouseleave', function () {
+                nav.style.background = '#1B4242';
+            });
+
+           
+        });
+       
+</script>
+    <audio id="tvGlitchSound" src="tv-glitch-6245.mp3" autoplay loop></audio>
+</body>
+
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Login & Registration</title>
+</head>
+<body>
+    <style>
+        /* POPPINS FONT */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+  #map-container {
+        margin-top: 1075px;
+}
+
+        iframe {
+            width: 450%;
+            height: 450px; 
+            border: 0;
+            margin-left: 150px;
+            background-size: 120vw;
+
+        }
+
+        html { 
+  background: url(OIP.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: url(d.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: auto;
+}
+::-webkit-scrollbar {
+height: 100px;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    background: rgba(39, 39, 39, 0.4);
+}
+.nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+    z-index: 100;
+    margin-left: 550px;
+
+}
+
+p{
+    margin-bottom: 250px;
+
+}
+.nav-menu ul{
+    display: flex;
+}
+.nav-menu ul li{
+    list-style-type: none;
+}
+.nav-menu ul li .link{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+.link:hover, .active{
+    border-bottom: 2px solid #fff;
+}
+.nav-button .btn{
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.btn:hover{
+    background: rgba(255, 255, 255, 0.3);
+}
+#registerBtn{
+    margin-left: 15px;
+}
+.btn.white-btn{
+    background: rgba(255, 255, 255, 0.7);
+}
+.btn.btn.white-btn:hover{
+    background: rgba(255, 255, 255, 0.5);
+}
+.nav-menu-btn{
+    display: none;
+}
+.form-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+
+}
+
+.login-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: .5s ease-in-out;
+  margin-left: -350px;
+  bottom: 170px;
+}
+
+.top span {
+  color: #fff;
+  font-size: small;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px 0 30px 0;
+}
+
+.two-col {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: small;
+  margin-top: 10px;
+  gap: 250px;
+
+}
+
+.two-col .one {
+  display: flex;
+  gap: 5px;
+}
+
+.two label a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.two label a:hover {
+  text-decoration: underline;
+}@media only screen and (max-width: 786px){
+    .nav-button{
+        display: none;
+    }
+    .nav-menu.responsive{
+        top: 100px;
+    }
+    .nav-menu{
+        position: absolute;
+        top: -800px;
+        display: flex;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        width: 100%;
+        height: 90vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+    }
+    .nav-menu ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-menu-btn{
+        display: block;
+    }
+    .nav-menu-btn i{
+        font-size: 25px;
+        color: #fff;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .3s;
+    }
+    .nav-menu-btn i:hover{
+        background: rgba(255, 255, 255, 0.15);
+    }
+}
+@media only screen and (max-width: 540px) {
+    .wrapper{
+        min-height: 100vh;
+    }
+    .form-box{
+        width: 100%;
+        height: 500px;
+    }
+    .register-container, .login-container{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .register-container .two-forms{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+#u p, a{
+    text-decoration: none;
+}
+
+label {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.input-field {
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  height: 50px;
+  width: 100%;
+  padding: 0 10px 0 45px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  transition: .2s ease;
+  margin-top: 5px;
+
+}
+
+.input-field:hover, .input-field:focus {
+  background: rgba(255, 255, 255, 0.25);
+}
+.input-box {
+    position: relative;
+    margin-bottom: 20px; /* Add space between input-box elements */
+}
+
+.input-field {
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px 0 45px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+    margin-top: 5px;
+    margin-bottom: 5px; /* Add a bottom margin for spacing */
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%; /* Adjusted to center the icon vertically */
+    transform: translateY(-50%);
+    left: 10px;
+    color: #fff;
+}
+
+
+/* Additional styles to align the inputs in the middle */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-box {
+    width: 30%; /* Adjust the width based on your preference */
+    height: 30%; /* Adjust the width based on your preference */
+
+}
+button {
+    width: 185px;
+    height: 50px;
+    text-align: center;
+    margin-left: 175px;
+    background-color: #000000;  /* Dark blue, a color often associated with space and NASA */
+    border: 2px solid #000000;  /* Matching border color */
+    font-family: 'Tilt Neon', sans-serif;
+    font-weight: bold;  /* 'bolder' is changed to 'bold' for better compatibility */
+    color: #F4EAE0;
+    cursor: pointer;  /* Add a pointer cursor to indicate interactivity */
+    transition: background-color 0.3s, color 0.3s;  /* Smooth transition on hover */
+}
+
+button:focus{
+    background-color: orange;
+}
+
+button:hover {
+    background-color: #3d6cab;  /* Darker blue on hover */
+    color: #FFFFFF;  /* White text on hover for better visibility */
+    border-color: #3d6cab;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+nav li {
+    margin: 0 20px;
+    position: relative;
+    margin-left: 140px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 19px;
+    text-align: right;
+    transition: letter-spacing 0.3s ease;
+}
+
+nav a:hover {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    letter-spacing: 0.4px;
+}
+
+.submit{
+    margin-left: 140px;
+}
+
+    </style>
+ <div class="wrapper">
+    <nav class="nav">
+        <nav id="nav">
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="apollo.html"><li>Biography</li></a>
+                <a href="project.html"><li>Our Projects</li></a>
+                <a href="contacti.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+        <div class="nav-button">
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <div id="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11761.808246878873!2d21.112341828465087!3d42.524450952974526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135482f2c3bb7b8d%3A0x8406c558b527d975!2sLipljan!5e0!3m2!1sen!2s!4v1702464860565!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+<!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        
+        
+
+        <form action="https://formspree.io/f/mdorvedy" method="POST" class="form-box">
+            <div class="login-container">
+              <div class="top">
+                <span>We would like to answer your Question</span>
+              </div>
+              <div class="input-box">
+                <label>
+                  Your email:
+
+                  <input type="text" class="input-field" name="email" placeholder="Email">
+                </label>
+                <label>
+                    Your Name:
+                    <br>
+                    <input type="text" class="input-field" name="name" placeholder="Name">
+                  </label>
+                  <label>
+                    Your Surname:
+                    <input type="text" class="input-field" name="Surname" placeholder="Surname">
+                  </label>
+             
+              </div>
+              <div class="input-box">
+                <label>
+                  Your message:
+                  <textarea name="message" class="input-field" placeholder="message"></textarea>
+                </label>
+              </div>
+              <div class="input-box">
+                <button type="submit" class="submit">Send</button>
+              </div>
+            </div>
+          </form>
+          
+
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const nav = document.getElementById('nav');
+                const flickeringHeader = document.getElementById('flickeringHeader');
+    
+                nav.style.background = '#1B4242';
+    
+                nav.addEventListener('mousemove', function (event) {
+                    const x = event.clientX / window.innerWidth * 135;
+                const y = event.clientY / window.innerHeight * 100;
+    
+                    nav.style.background = `linear-gradient(45deg, 
+                        rgba(135, 206, 250, 0.8) 0%, 
+                        rgba(104, 148, 219, 0.8) ${x}%, 
+                        rgba(94, 58, 153, 0.8) ${y}%, 
+                        rgba(117, 102, 184, 0.8) 0%, 
+                        rgba(27, 66, 66, 0.8) 0%)`;
+                });
+    
+                nav.addEventListener('mouseleave', function () {
+                    nav.style.background = '#1B4242';
+                });
+    
+                
+            });
+            
+    </script>
+
+
+</body>
+</html>

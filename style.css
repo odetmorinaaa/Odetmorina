@@ -1,0 +1,190 @@
+body {
+    background-image: url(OIP.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 100px transparent;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 8);
+    font-family: 'Tilt Neon', sans-serif;
+    overflow: auto;
+
+}
+
+#neilArmstrong{
+    margin-right: 105px;
+}
+
+nav {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    margin-left: -120px;
+    background: #f09433;
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+nav:focus{
+    background-color: #f09433;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-right: 250px;
+
+}
+
+
+li {
+    margin: 0 0px; /* Adjusted margin here */
+    text-align: center;
+    margin-right: 250px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    font-family: 'Tilt Neon', sans-serif;
+    text-align: center;
+    
+}
+
+a:hover {
+    color: black;
+}
+h1 {
+    font-family: 'Tilt Neon', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+img {
+    width: 100px;
+}
+
+.admin {
+    text-align: right;
+    margin-bottom: 1px;
+    margin-right: 50px;
+}
+
+span3 {
+    color: #FFC5C5;
+    margin-left: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+nav li {
+    margin: 0 20px;
+    position: relative;
+    margin-left: 140px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 19px;
+    text-align: right;
+    transition: letter-spacing 0.3s ease;
+}
+
+nav a:hover {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    letter-spacing: 0.4px;
+}
+
+iframe{
+    background-color: white;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font: optional;
+}
+
+h2 {
+    margin-top: 250px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 250px;
+}
+
+span {
+    background-color: transparent;
+    outline: #fff;
+}
+
+h2 {
+    margin-top: 250px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 230px;
+    color: transparent;
+    -webkit-text-stroke: 0.5px white;
+    letter-spacing: 5px;
+    transition: -webkit-text-stroke 0.1s ease;
+    animation: flicker 1ms infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        -webkit-text-stroke: 0.5px white;
+    }
+
+    100% {
+        -webkit-text-stroke: 0.1px white;
+    }
+}
+
+
+
+
+
+button {
+background-color: orange;
+border-color: orange;
+color: white;
+height: 60px;
+width: 130px;
+margin-left: 1450px;
+font-family: 'Tilt Neon', sans-serif;
+font-weight: bolder;
+cursor: pointer;
+}
+
+button:focus{
+    background-color: orange;
+border-color: orange;
+color: white;
+
+}
+
+
+

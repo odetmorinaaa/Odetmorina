@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            margin-top: 30px;
+            font-family: 'Tilt Neon', sans-serif;
+            overflow: auto;
+
+        }
+
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        nav {
+            background-color: #1a1a1a;
+            padding: 5px;
+            
+            
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #fff; /* Match text color with the body */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ccc;
+                transition: letter-spacing 0.3s ease; /* Smooth transition for letter spacing */
+
+        }
+
+        nav a:hover {
+            color: #ffcc00; /* Yellow color on hover */
+            letter-spacing: 2px; /* Letter spacing on hover */
+
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .project {
+            flex: 1;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #1a1a1a; /* Match nav background color */
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #ffcc00; /* Yellow color for headings */
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.5;
+            color: #ccc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+        }
+
+        nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+nav li {
+    margin: 0 20px;
+    position: relative;
+    margin-left: 140px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 19px;
+    text-align: right;
+    transition: letter-spacing 0.3s ease;
+}
+
+nav a:hover {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    letter-spacing: 0.4px;
+}
+    </style>
+</head>
+<body>
+
+    <nav id="nav">
+        <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="apollo.html"><li>Biography</li></a>
+            <a href="project.html"><li>Our Projects</li></a>
+            <a href="contacti.html"><li>Contact</li></a>
+        </ul>
+    </nav>
+
+<header>
+    <h1>NASA's Greatest Projects</h1>
+</header>
+
+<section>
+    <div class="project">
+        <h2>Project 1</h2>
+        <p>Mercury Project. The Mercury Project, the first program in the United States to send humans into space, completed 25 flights, six of which carried astronauts between 1961 and 1963.</p>
+    </div>
+
+    <div class="project">
+        <h2>Project 2</h2>
+        <p>The Gemini Project (IPA: /ˈdʒɛmɪni/) was the second human spaceflight program in the United States. Developed after the first project, Mercury, and while the Apollo program was still in progress, Gemini was conceptualized in 1961 and completed in 1966. It carried a crew of two astronauts.</p>
+    </div>
+
+    <div class="project">
+        <h2>Project 3</h2>
+        <p>What is NASA Mission 3?
+            NASA's SpaceX Crew-3 mission is the third flight of the Crew Dragon spacecraft and the Falcon 9 rocket, transporting NASA astronauts Raja Chari, mission commander, Tom Marshburn, pilot, and Kayla Barron, mission specialist, along with European Space Agency (ESA) astronaut Matthias Maurer, who will also serve as a mission specialist.</p>
+    </div>
+
+    <div class="project">
+        <h2>Project 4</h2>
+        <p>With the Artemis program, NASA will land the first and second humans on the Moon by 2024, using innovative technology to explore more of the Moon's surface than ever before. We will collaborate with our commercial and international partners and establish sustainable exploration by the end of the decade.</p>
+    </div>
+</section>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1a1a1a" fill-opacity="1" d="M0,32L48,64C96,96,192,160,288,176C384,192,480,160,576,160C672,160,768,192,864,197.3C960,203,1056,181,1152,144C1248,107,1344,53,1392,26.7L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const nav = document.getElementById('nav');
+        const flickeringHeader = document.getElementById('flickeringHeader');
+
+        nav.style.background = '#1B4242';
+
+        nav.addEventListener('mousemove', function (event) {
+            const x = event.clientX / window.innerWidth * 100;
+            const y = event.clientY / window.innerHeight * 100;
+
+            nav.style.background = `linear-gradient(45deg, 
+                rgba(135, 206, 250, 0.8) 0%, 
+                rgba(104, 148, 219, 0.8) ${x}%, 
+                rgba(94, 58, 153, 0.8) ${y}%, 
+                rgba(117, 102, 184, 0.8) 0%, 
+                rgba(27, 66, 66, 0.8) 0%)`;
+        });
+
+        nav.addEventListener('mouseleave', function () {
+            nav.style.background = '#1B4242';
+        });
+
+        
+    });
+    
+</script>
+
+</body>
+</html>
